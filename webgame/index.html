@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>🎮 Spot the Fake Message</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <h1>🎮 Spot the Fake Message</h1>
+      <p class="subtitle">Identify whether the message is <strong>Safe</strong> or <strong>Fraud</strong> — learn DSA along the way.</p>
+    </header>
+
+    <section class="game">
+      <div id="progress" class="progress">Round: <span id="round">0</span></div>
+      <div class="progress-bar" aria-hidden="true"><div id="progressFill"></div></div>
+
+      <div id="card" class="message-card">
+        <div id="messageText" class="message-text">Loading message...</div>
+      </div>
+
+      <div class="buttons">
+        <button id="safeBtn" class="btn safe">✅ Safe</button>
+        <button id="fraudBtn" class="btn fraud">❌ Fraud</button>
+      </div>
+
+      <div id="result" class="result hidden"></div>
+
+      <div id="explanation" class="explanation hidden"></div>
+
+      <div class="controls">
+        <button id="nextBtn" class="btn next">Next Message</button>
+        <button id="speakBtn" class="btn speak">🔊 Speak Explanation</button>
+      </div>
+
+      <div class="score">
+        Score: <span id="score">0</span> / <span id="attempts">0</span>
+      </div>
+    </section>
+
+    <section class="education">
+      <h2>DSA Used in This Game</h2>
+      <ul>
+        <li><strong>Array</strong>: all messages are stored in a JavaScript array (collection of message objects).</li>
+        <li><strong>Linear Search</strong>: the game checks your answer by scanning the array one-by-one to find the displayed message and verify its type.</li>
+      </ul>
+      <p class="note">This is a deliberate, easy-to-follow example so beginners can see how data structures and search algorithms work in a real app.</p>
+    </section>
+
+    <footer class="footer">Helpful tip: When in doubt, don't click links and verify sender details.</footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

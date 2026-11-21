@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: freelancescout-ai
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app --bind 0.0.0.0:$PORT --workers 1 --threads 4 --timeout 45
+    healthCheckPath: /health
+    envVars:
+      - key: APP_ACCESS_SECRET
+        generateValue: true
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: TELEGRAM_CHAT_ID
+        sync: false
+      - key: FREELANCER_OAUTH_TOKEN
+        sync: false
+      - key: NOTIFY_EMPTY_SEARCH
+        value: "false"

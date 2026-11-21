@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PassionStack - Education for All, Powered by Student Knowledge</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1A3A52;
+            --accent: #E07A5F;
+            --accent-2: #81B29A;
+            --bg-light: #F8F9FA;
+            --bg-dark: #F1F3F5;
+            --text: #212529;
+            --text-muted: #6C757D;
+            --border: #DEE2E6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'IBM Plex Sans', sans-serif;
+            background: var(--bg-light);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Hero Section - Bold Asymmetric */
+        .hero {
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            background: var(--primary);
+            position: relative;
+            overflow: hidden;
+            margin-top: 70px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 40%;
+            height: 100%;
+            background: var(--accent);
+            clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+            opacity: 0.1;
+        }
+
+        .hero-left {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 4rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-right {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--accent);
+            clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+            padding: 4rem;
+        }
+
+        .hero h1 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 6rem;
+            color: white;
+            line-height: 0.95;
+            margin-bottom: 2rem;
+            letter-spacing: -0.03em;
+            opacity: 0;
+            transform: translateX(-50px);
+            animation: slideInLeft 1s ease forwards;
+        }
+
+        @keyframes slideInLeft {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .hero .tagline {
+            font-size: 1.4rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 500px;
+            line-height: 1.5;
+            opacity: 0;
+            animation: fadeIn 1s ease 0.3s forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 3rem;
+            margin-top: 3rem;
+            opacity: 0;
+            animation: fadeIn 1s ease 0.6s forwards;
+        }
+
+        .stat {
+            border-left: 4px solid var(--accent);
+            padding-left: 1rem;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: white;
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-top: 0.5rem;
+        }
+
+        .hero-mission {
+            color: var(--primary);
+            font-size: 1.6rem;
+            line-height: 1.4;
+            font-weight: 500;
+            max-width: 450px;
+        }
+
+        /* Section Base */
+        section {
+            padding: 7rem 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-header {
+            margin-bottom: 4rem;
+        }
+
+        .section-number {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            font-family: 'DM Serif Display', serif;
+            font-size: 3.5rem;
+            color: var(--text);
+            line-height: 1.1;
+            max-width: 800px;
+        }
+
+        /* Founder Story - Magazine Layout */
+        .founder {
+            background: white;
+        }
+
+        .story-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .story-image {
+            position: sticky;
+            top: 2rem;
+            background: var(--bg-dark);
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            border: 1px solid var(--border);
+        }
+
+        .story-content p {
+            font-size: 1.1rem;
+            line-height: 1.9;
+            margin-bottom: 1.8rem;
+            color: var(--text);
+        }
+
+        .story-content p:first-child {
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: var(--primary);
+        }
+
+        .pullquote {
+            border-left: 6px solid var(--accent);
+            padding-left: 2rem;
+            margin: 2.5rem 0;
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.5rem;
+            line-height: 1.4;
+            color: var(--primary);
+            font-style: italic;
+        }
+
+        /* Problems - Bold Grid */
+        .problems {
+            background: var(--primary);
+            color: white;
+        }
+
+        .problems .section-title {
+            color: white;
+        }
+
+        .problems-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2px;
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .problem-item {
+            background: var(--primary);
+            padding: 3rem 2rem;
+            transition: background 0.3s ease;
+        }
+
+        .problem-item:hover {
+            background: rgba(224, 122, 95, 0.2);
+        }
+
+        .problem-number {
+            font-family: 'DM Serif Display', serif;
+            font-size: 3rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+            line-height: 1;
+        }
+
+        .problem-item h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .problem-item p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.7;
+        }
+
+        /* Solution - Split Layout */
+        .solution {
+            background: var(--bg-light);
+        }
+
+        .solution-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .solution-visual {
+            background: var(--accent-2);
+            height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .solution-visual::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+        }
+
+        .solution-list {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .solution-card {
+            background: white;
+            padding: 2rem;
+            border-left: 5px solid var(--accent);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .solution-card:hover {
+            transform: translateX(10px);
+            box-shadow: -10px 10px 0 rgba(224, 122, 95, 0.2);
+        }
+
+        .solution-card h3 {
+            font-size: 1.4rem;
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+        }
+
+        .solution-card p {
+            color: var(--text-muted);
+            line-height: 1.8;
+        }
+
+        /* Features - Brutalist Cards */
+        .features {
+            background: var(--bg-dark);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+
+        .feature-box {
+            background: white;
+            padding: 0;
+            border: 3px solid var(--text);
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-box:hover {
+            transform: translate(-5px, -5px);
+            box-shadow: 5px 5px 0 var(--accent);
+        }
+
+        .feature-header {
+            background: var(--text);
+            color: white;
+            padding: 1.5rem;
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.5rem;
+        }
+
+        .feature-body {
+            padding: 2rem 1.5rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
+
+        /* Status - Timeline */
+        .status {
+            background: white;
+        }
+
+        .status-timeline {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            padding-left: 3rem;
+        }
+
+        .status-timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: var(--accent);
+        }
+
+        .status-milestone {
+            position: relative;
+            margin-bottom: 3rem;
+            padding-left: 2rem;
+        }
+
+        .status-milestone::before {
+            content: '';
+            position: absolute;
+            left: -3rem;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            background: var(--accent);
+            border: 4px solid white;
+            border-radius: 50%;
+            box-shadow: 0 0 0 4px var(--bg-light);
+        }
+
+        .status-milestone h3 {
+            font-size: 1.4rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .status-milestone p {
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
+
+        /* Demo - Bold CTA */
+        .demo {
+            background: var(--accent-2);
+            text-align: center;
+        }
+
+        .demo .section-title {
+            color: white;
+        }
+
+        .demo-container {
+            max-width: 700px;
+            margin: 3rem auto 0;
+            background: white;
+            padding: 5rem 3rem;
+            border: 4px solid var(--primary);
+            position: relative;
+        }
+
+        .demo-container::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: 10px;
+            bottom: 10px;
+            border: 4px solid rgba(26, 58, 82, 0.3);
+            z-index: -1;
+        }
+
+        .demo-container h3 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .demo-container p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+        }
+
+        /* Contact - Dark Bold */
+        .contact {
+            background: var(--text);
+            color: white;
+            padding: 7rem 0 5rem;
+        }
+
+        .contact .section-number {
+            color: var(--accent);
+        }
+
+        .contact .section-title {
+            color: white;
+        }
+
+        .contact-layout {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .contact-box {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2.5rem 2rem;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            transition: border-color 0.3s ease;
+        }
+
+        .contact-box:hover {
+            border-color: var(--accent);
+        }
+
+        .contact-label {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .contact-value {
+            font-size: 1.2rem;
+            color: white;
+            word-break: break-word;
+        }
+
+        .contact-value a {
+            color: white;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+
+        .contact-value a:hover {
+            border-color: var(--accent);
+        }
+
+        .qr-section {
+            grid-column: 1 / -1;
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 3rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .qr-wrapper {
+            display: inline-block;
+            background: white;
+            padding: 2rem;
+            border: 3px solid var(--accent);
+        }
+
+        .qr-code {
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(135deg, var(--primary), var(--accent-2));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 0.95rem;
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        .qr-caption {
+            margin-top: 1.5rem;
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .closing {
+            text-align: center;
+            margin-top: 4rem;
+            font-family: 'DM Serif Display', serif;
+            font-size: 2rem;
+            color: var(--accent);
+        }
+
+        /* Animations */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .scroll-reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: var(--text);
+            z-index: 1000;
+            border-bottom: 3px solid var(--accent);
+            transition: transform 0.3s ease;
+        }
+
+        nav.hidden {
+            transform: translateY(-100%);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .nav-logo {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.5rem;
+            color: white;
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 3rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: white;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links a.active {
+            color: var(--accent);
+        }
+
+        .nav-cta {
+            background: var(--accent);
+            color: white !important;
+            padding: 0.7rem 1.5rem;
+            border: 2px solid var(--accent);
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .nav-cta::after {
+            display: none;
+        }
+
+        .nav-cta:hover {
+            background: transparent;
+            color: var(--accent) !important;
+        }
+
+        .mobile-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .mobile-toggle span {
+            width: 25px;
+            height: 3px;
+            background: white;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(7px, 7px);
+        }
+
+        .mobile-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .mobile-toggle {
+                display: flex;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background: var(--text);
+                flex-direction: column;
+                gap: 0;
+                padding: 2rem;
+                border-bottom: 3px solid var(--accent);
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+            }
+
+            .nav-links.active {
+                transform: translateX(0);
+            }
+
+            .nav-links li {
+                width: 100%;
+                text-align: center;
+                padding: 1rem 0;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            .nav-links a::after {
+                display: none;
+            }
+
+            .nav-cta {
+                display: inline-block;
+            }
+            .hero {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-right {
+                clip-path: none;
+                padding: 3rem 2rem;
+            }
+
+            .hero h1 {
+                font-size: 4rem;
+            }
+
+            .story-layout,
+            .solution-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .story-image {
+                position: static;
+                height: 300px;
+            }
+
+            .problems-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 2.5rem;
+            }
+
+            .status-timeline {
+                padding-left: 2rem;
+            }
+
+            .hero-left {
+                padding: 3rem 2rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="mainNav">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">PassionStack</a>
+            <button class="mobile-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#founder">Story</a></li>
+                <li><a href="#problems">Problems</a></li>
+                <li><a href="#solution">Solution</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#status">Progress</a></li>
+                <li><a href="#contact" class="nav-cta">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-left">
+            <h1>PassionStack</h1>
+            <p class="tagline">Education for All, Powered by Student Knowledge</p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-number">1</div>
+                    <div class="stat-label">Platform</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">∞</div>
+                    <div class="stat-label">Possibilities</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Student-First</div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-right">
+            <p class="hero-mission">Building a platform where students learn, share knowledge, and grow together—rewarding those who contribute to making education accessible for everyone.</p>
+        </div>
+    </section>
+
+    <!-- Founder Story -->
+    <section class="founder" id="founder">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <div class="section-number">01 — Origin</div>
+                <h2 class="section-title">Why PassionStack Exists</h2>
+            </div>
+            <div class="story-layout">
+                <div class="story-image scroll-reveal">
+                    📖
+                </div>
+                <div class="story-content">
+                    <p>I'm a student, just like millions of others trying to navigate the overwhelming world of learning.</p>
+                    
+                    <p>Every day, I watched my peers struggle with the same problems I faced: scattered resources, questionable quality, wasted money on content that didn't deliver, and the constant feeling of being lost in a sea of information.</p>
+                    
+                    <p>The breaking point came when I realized that while we were all desperately searching for good study material, many of us actually had valuable knowledge to share. Some excelled in mathematics, others in programming, design, or writing. Yet there was no structured way to connect those who knew with those who needed to know.</p>
+                    
+                    <div class="pullquote">
+                        "What if students could help each other in a meaningful way? What if sharing knowledge wasn't just altruistic, but actually rewarded?"
+                    </div>
+                    
+                    <p>That's when PassionStack was born—not from a business idea, but from a genuine need I witnessed every single day. It started as a simple thought: create a platform where students upload what they know, others verify its quality, and everyone benefits.</p>
+                    
+                    <p>The person who shares gets recognition and rewards. The person who learns gets verified, high-quality content. And the entire community grows stronger together.</p>
+                    
+                    <p>I'm building this while still studying, learning to code, designing interfaces, and figuring out how AI can help make education fairer. It's not easy, but it's necessary.</p>
+                    
+                    <p>Because every student deserves access to quality education, and every student who has knowledge deserves to be valued for sharing it. This is more than a startup. It's a mission to transform how we learn and share knowledge—one upload, one review, one connection at a time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problems -->
+    <section class="problems" id="problems">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <div class="section-number">02 — Problems</div>
+                <h2 class="section-title">The Challenges Students Face Every Day</h2>
+            </div>
+            <div class="problems-grid">
+                <div class="problem-item scroll-reveal">
+                    <div class="problem-number">01</div>
+                    <h3>Scattered Learning Content</h3>
+                    <p>Students waste hours searching across multiple platforms, never sure if they've found everything they need or if the content is even relevant.</p>
+                </div>
+                <div class="problem-item scroll-reveal">
+                    <div class="problem-number">02</div>
+                    <h3>No Quality Verification</h3>
+                    <p>Anyone can post anything online. There's no reliable way to know if study material is accurate, complete, or worth your time before investing in it.</p>
+                </div>
+                <div class="problem-item scroll-reveal">
+                    <div class="problem-number">03</div>
+                    <h3>Wasted Money on Poor Resources</h3>
+                    <p>Students pay for courses and materials that turn out to be outdated, incomplete, or simply not helpful—with no recourse for their lost investment.</p>
+                </div>
+                <div class="problem-item scroll-reveal">
+                    <div class="problem-number">04</div>
+                    <h3>Knowledge Goes Unrewarded</h3>
+                    <p>Students who create excellent notes, tutorials, and resources have no platform to share them meaningfully or receive recognition for their efforts.</p>
+                </div>
+                <div class="problem-item scroll-reveal">
+                    <div class="problem-number">05</div>
+                    <h3>Fear of Communication & Low Confidence</h3>
+                    <p>Many students struggle with public speaking and expressing ideas. Traditional education rarely provides safe spaces to practice and build confidence through teaching others.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution -->
+    <section class="solution" id="solution">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <div class="section-number">03 — Solution</div>
+                <h2 class="section-title">How PassionStack Changes Everything</h2>
+            </div>
+            <div class="solution-grid">
+                <div class="solution-visual scroll-reveal">
+                    💡
+                </div>
+                <div class="solution-list">
+                    <div class="solution-card scroll-reveal">
+                        <h3>Structured Content System</h3>
+                        <p>All learning materials are organized by subject, topic, and difficulty level. Students find exactly what they need without endless searching, and can follow clear learning paths curated by the community.</p>
+                    </div>
+                    <div class="solution-card scroll-reveal">
+                        <h3>Community-Driven Quality Verification</h3>
+                        <p>Every uploaded resource goes through peer review and community ratings. Students verify each other's work, ensuring only high-quality, accurate content rises to the top.</p>
+                    </div>
+                    <div class="solution-card scroll-reveal">
+                        <h3>AI-Assisted Content Moderation</h3>
+                        <p>Our AI admin helps verify content quality, detects plagiarism, checks accuracy against reliable sources, and ensures community guidelines are maintained.</p>
+                    </div>
+                    <div class="solution-card scroll-reveal">
+                        <h3>Credit-Based Reward System</h3>
+                        <p>Students earn credits for uploading valuable content, helping others, and contributing to the community. These credits unlock premium resources, giving knowledge contributors tangible rewards.</p>
+                    </div>
+                    <div class="solution-card scroll-reveal">
+                        <h3>Knowledge Builds Confidence</h3>
+                        <p>By teaching others through uploads, answering questions, and creating tutorials, students develop communication skills and confidence naturally.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <div class="section-number">04 — Features</div>
+                <h2 class="section-title">What Makes PassionStack Work</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-box scroll-reveal">
+                    <div class="feature-header">Upload & Collaborate</div>
+                    <div class="feature-body">Share your notes, tutorials, summaries, and insights. Help fellow students while building your teaching portfolio and confidence.</div>
+                </div>
+                <div class="feature-box scroll-reveal">
+                    <div class="feature-header">Earn Credits from Knowledge</div>
+                    <div class="feature-body">Get rewarded for quality contributions. Use credits to access premium content created by other students and verified by the community.</div>
+                </div>
+                <div class="feature-box scroll-reveal">
+                    <div class="feature-header">AI-Powered Admin</div>
+                    <div class="feature-body">Our AI assistant helps maintain quality, provides instant feedback on uploads, and ensures the platform remains a trusted learning resource.</div>
+                </div>
+                <div class="feature-box scroll-reveal">
+                    <div class="feature-header">Premium Content Marketplace</div>
+                    <div class="feature-body">Top contributors will be able to sell specialized, in-depth content, creating genuine income opportunities from their expertise.</div>
+                </div>
+                <div class="feature-box scroll-reveal">
+                    <div class="feature-header">Learn, Share, Grow</div>
+                    <div class="feature-body">Access verified resources, contribute your knowledge, build communication skills, and grow both academically and personally in a supportive community.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Status -->
+    <section class="status" id="status">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <div class="section-number">05 — Progress</div>
+                <h2 class="section-title">Current Status & Transparency</h2>
+            </div>
+            <div class="status-timeline">
+                <div class="status-milestone scroll-reveal">
+                    <h3>Solo Student Founder</h3>
+                    <p>Built by a student, for students—understanding the problems firsthand and committed to solving them authentically.</p>
+                </div>
+                <div class="status-milestone scroll-reveal">
+                    <h3>Building While Studying</h3>
+                    <p>Developing this platform alongside academics, learning and creating simultaneously, balancing coursework with startup development.</p>
+                </div>
+                <div class="status-milestone scroll-reveal">
+                    <h3>Core Screens Completed</h3>
+                    <p>Main interface designs finalized, user flows mapped and validated through student feedback and usability testing.</p>
+                </div>
+                <div class="status-milestone scroll-reveal">
+                    <h3>AI Prototype Ready</h3>
+                    <p>Intelligent content moderation and quality verification system functional, with machine learning models trained and tested.</p>
+                </div>
+                <div class="status-milestone scroll-reveal">
+                    <h3>Beta Launch Planned</h3>
+                    <p>Currently preparing for initial testing with select student groups, refining features based on early feedback and iterations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo -->
+    <section class="demo" id="demo">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <div class="section-number" style="color: white;">06 — Demo</div>
+                <h2 class="section-title">See PassionStack in Action</h2>
+            </div>
+            <div class="demo-container scroll-reveal">
+                <h3>Prototype Demo – Coming Soon</h3>
+                <p>We're finalizing the beta version for our first user testing group. Check back soon for a live demonstration of the platform.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <div class="section-number">07 — Connect</div>
+                <h2 class="section-title">Let's Talk</h2>
+            </div>
+            <div class="contact-layout">
+                <div class="contact-box scroll-reveal">
+                    <div class="contact-label">Email</div>
+                    <div class="contact-value"><a href="mailto:parikhshlok@gmail.com">parikhshlok@gmail.com</a></div>
+                </div>
+                <div class="contact-box scroll-reveal">
+                    <div class="contact-label">Phone</div>
+                    <div class="contact-value"><a href="tel:+918155984270">+91 81559 84270</a></div>
+                </div>
+                <div class="contact-box scroll-reveal">
+                    <div class="contact-label">LinkedIn</div>
+                    <div class="contact-value"><a href="https://www.linkedin.com/in/shlok-parikh-862b7b275?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BmOvk1EpqQAm3JQ03i9tO5Q%3D%3D" target="_blank">linkedin.com/in/shlok-parikh</a></div>
+                </div>
+            </div>
+            <div class="qr-section scroll-reveal">
+                <h3 style="margin-bottom: 2rem; color: rgba(255,255,255,0.9); font-family: 'DM Serif Display', serif; font-size: 1.8rem;">Share Your Feedback</h3>
+                <div class="qr-wrapper">
+                    <div class="qr-code">
+                        QR Code<br><br>Scan to access<br>feedback form
+                    </div>
+                </div>
+                <p class="qr-caption">Your insights help us build better</p>
+            </div>
+            <p class="closing">Let's build the future of learning together.</p>
+        </div>
+    </section>
+
+    <script>
+        // Mobile menu toggle
+        const mobileToggle = document.querySelector('.mobile-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileToggle.addEventListener('click', () => {
+            mobileToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetSection = document.querySelector(targetId);
+                const navHeight = 70;
+                const targetPosition = targetSection.offsetTop - navHeight;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Active navigation state on scroll
+        const sections = document.querySelectorAll('section[id]');
+        const navItems = document.querySelectorAll('.nav-links a');
+
+        function updateActiveNav() {
+            const scrollPosition = window.scrollY + 100;
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                const sectionId = section.getAttribute('id');
+
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    navItems.forEach(item => {
+                        item.classList.remove('active');
+                        if (item.getAttribute('href') === `#${sectionId}`) {
+                            item.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }
+
+        window.addEventListener('scroll', updateActiveNav);
+        updateActiveNav(); // Initial call
+
+        // Hide/show navigation on scroll
+        let lastScroll = 0;
+        const nav = document.getElementById('mainNav');
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+
+            if (currentScroll <= 70) {
+                nav.classList.remove('hidden');
+            } else if (currentScroll > lastScroll && currentScroll > 200) {
+                nav.classList.add('hidden');
+            } else {
+                nav.classList.remove('hidden');
+            }
+
+            lastScroll = currentScroll;
+        });
+
+        // Scroll reveal animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-reveal').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Stagger animations
+        const staggerGroups = [
+            '.problem-item',
+            '.solution-card',
+            '.feature-box',
+            '.status-milestone',
+            '.contact-box'
+        ];
+
+        staggerGroups.forEach(selector => {
+            document.querySelectorAll(selector).forEach((el, index) => {
+                el.style.transitionDelay = `${index * 0.1}s`;
+            });
+        });
+    </script>
+</body>
+</html>

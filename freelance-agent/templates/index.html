@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101a2b"><title>Freelance Task Finder</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header class="top"><div class="brand"><span class="logo">✦</span><div><h1>Freelance Task <em>Finder</em></h1><p>Find paid projects matched to your skills</p></div></div><span class="ready"><i></i> On-demand search</span></header>
+  <main>
+    <section class="intro"><p class="eyebrow">CLIENT PROJECTS AND SHORT TASKS</p><h2>Find freelance tasks<br><span>that fit your skills.</span></h2><p>Search authorized marketplace sources. Listings retain their source data; scores and warnings are this app’s estimates.</p></section>
+    <section class="panel" aria-labelledby="search-title"><div class="section-head"><div><p class="eyebrow">SEARCH SETTINGS</p><h2 id="search-title">Task filters</h2></div><span class="source-tag">On-demand only</span></div>
+      {% if access_required %}<label class="field access">App access key<input id="accessKey" type="password" autocomplete="off" placeholder="Enter your access key" required></label>{% else %}<div class="notice">Search is protected by server configuration. Configure APP_ACCESS_SECRET before deployment.</div>{% endif %}
+      <div class="fields"><label class="field">Minimum fixed budget<input id="budget" type="number" min="0" max="1000000000" value="500"></label><label class="field">Budget currency<select id="currency"><option>INR</option><option>USD</option><option>EUR</option><option>GBP</option><option>CAD</option><option>AUD</option><option>ANY</option></select></label>
+      <label class="field">Project type<select id="projectType"><option value="either">Fixed price or hourly</option><option value="fixed">Fixed price</option><option value="hourly">Hourly</option></select></label><label class="field">Maximum results<select id="limit"><option>5</option><option selected>10</option><option>15</option><option>20</option></select></label>
+      <label class="field">Recent window<select id="recentDays"><option value="1">Past day</option><option value="3">Past 3 days</option><option selected value="7">Past 7 days</option><option value="30">Past 30 days</option></select></label>
+      <label class="field">Include keywords<input id="includeKeywords" type="text" maxlength="300" placeholder="python, excel, csv"></label><label class="field">Exclude keywords<input id="excludeKeywords" type="text" maxlength="300" placeholder="internship, contest"></label></div>
+      <div class="toggles"><label><input id="beginner" type="checkbox"> Only source briefs with beginner-level wording</label><label><input id="recent" type="checkbox"> Only posted within this window</label></div>
+      <p class="privacy">Budget filter defaults to ₹500; ₹1,000 is a stronger preferred target. Foreign amounts stay in their listed currency; no exchange estimate is shown.</p>
+      <button id="find" class="primary"><span>Find Freelance Tasks</span><span aria-hidden="true">↗</span></button><p class="privacy">Search starts only when clicked. No bids, applications, or client messages are sent.</p>
+    </section>
+    <section class="panel source-panel" aria-labelledby="sources-title"><div class="section-head"><div><p class="eyebrow">MARKETPLACE SOURCES</p><h2 id="sources-title">Connection status</h2></div></div><div id="sourceList" class="source-list" aria-live="polite"></div></section>
+    <section id="status" class="status" role="status" aria-live="polite" hidden></section>
+    <section id="resultsSection" hidden><div class="section-head results-head"><div><p class="eyebrow">MATCHING TASKS</p><h2 id="resultsTitle">Search results</h2></div><span id="resultCount" class="count"></span></div><p id="emptyMessage" class="empty-message" hidden></p><div id="results" class="cards"></div><p class="fineprint">Scores and red flags are rule-based estimates. Verify the brief, client, payment terms, and permissions at the marketplace before responding.</p></section>
+  </main><footer>FreelanceScout AI <span>Built for thoughtful, independent work.</span></footer>
+  <script src="{{ url_for('static', filename='app.js') }}" defer></script>
+</body></html>

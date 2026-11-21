@@ -1,0 +1,38 @@
+[
+  {
+    "_id": "8o3ubwemssieaa8",
+    "name": "Swapnaart Admin",
+    "email": "admin@swapnaart.com",
+    "password": "$2a$10$oMN4jSES/6UJO/R/WvvYZ.w6ecLy0LFEZAarx1Pl7iT/jLMLpnp2W",
+    "role": "admin",
+    "phone": "+91 9999999999",
+    "createdAt": "2026-08-14T05:31:08.048Z",
+    "updatedAt": "2026-08-14T05:31:08.049Z"
+  },
+  {
+    "_id": "6gter55mssieaab",
+    "name": "John Doe",
+    "email": "customer@swapnaart.com",
+    "password": "$2a$10$oMN4jSES/6UJO/R/WvvYZ.flbpz/TS8Q.whhmJfdMohbQyn/h.5qu",
+    "role": "customer",
+    "phone": "+91 8888888888",
+    "createdAt": "2026-08-14T05:31:08.051Z",
+    "updatedAt": "2026-08-14T05:31:08.051Z"
+  },
+  {
+    "_id": "sq1yrh8mt6tq57a",
+    "name": "Shlok Parikh",
+    "email": "parikhshlok11@gmail.com",
+    "password": "$2a$10$eWAPmevTIOQMQ2YMKgkK..BTBdoo8gOYN15a5M0S8ERyToqWnrYHG",
+    "phone": "1234567",
+    "username": "shlok",
+    "address": "Q54F+XC5\nSubhashnagar",
+    "city": "Bhavnagar",
+    "pinCode": "364001",
+    "state": "Gujarat",
+    "taxNumber": "",
+    "role": "customer",
+    "createdAt": "2026-08-24T05:57:03.574Z",
+    "updatedAt": "2026-08-24T05:57:03.574Z"
+  }
+]

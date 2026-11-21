@@ -1,0 +1,98 @@
+[
+  {
+    "_id": "gnuti8fmssieaac",
+    "title": "Visiting Card / Business Card",
+    "description": "Premium quality double-sided business cards with standard gloss, matte, or luxury velvet laminations.",
+    "minPrice": 499,
+    "maxPrice": 1999,
+    "deliveryTime": "2 Days",
+    "category": "Cards",
+    "features": [
+      "Double-Sided Design",
+      "Premium Card Stock",
+      "Gloss/Matte Lamination",
+      "Free Direct Shipping"
+    ],
+    "faqs": [
+      {
+        "q": "What is the standard card size?",
+        "a": "Standard size is 3.5 inches x 2 inches plus bleed edges."
+      },
+      {
+        "q": "Can I upload my own logo?",
+        "a": "Yes, upload your logo during requirements and we will integrate it."
+      }
+    ],
+    "createdAt": "2026-08-14T05:31:08.052Z",
+    "updatedAt": "2026-08-14T05:31:08.052Z"
+  },
+  {
+    "_id": "aext2memssieaad",
+    "title": "Premium Brand Identity & Logo Design",
+    "description": "Complete visual identity package including 3 custom logo concepts, color guides, typography manuals, and stationery design.",
+    "minPrice": 4999,
+    "maxPrice": 15000,
+    "deliveryTime": "5 Days",
+    "category": "Branding",
+    "features": [
+      "3 Premium Logo Concepts",
+      "Vector Formats (AI, PDF, SVG)",
+      "Corporate Brand Guidelines",
+      "Copyright Transfer Certificate"
+    ],
+    "faqs": [
+      {
+        "q": "How many revisions do I get?",
+        "a": "We provide unlimited modifications during the design concepts phase."
+      }
+    ],
+    "createdAt": "2026-08-14T05:31:08.053Z",
+    "updatedAt": "2026-08-14T05:31:08.053Z"
+  },
+  {
+    "_id": "kebkbalmssieaae",
+    "title": "Flex Banner / Outdoor Hoardings",
+    "description": "High-definition digital printing for shop banners, outdoor hoardings, and event backgrounds.",
+    "minPrice": 1500,
+    "maxPrice": 8500,
+    "deliveryTime": "3 Days",
+    "category": "Banners",
+    "features": [
+      "All Weather Flex Fabric",
+      "Rust-Free Eyelets Hooking",
+      "High Color Depth Saturation",
+      "Install Support Ready"
+    ],
+    "faqs": [
+      {
+        "q": "Do you design and print both?",
+        "a": "Yes, we handle design creation, flex sheet printing, and framing options."
+      }
+    ],
+    "createdAt": "2026-08-14T05:31:08.054Z",
+    "updatedAt": "2026-08-14T05:31:08.054Z"
+  },
+  {
+    "_id": "3s92ij7mssieaae",
+    "title": "Creative Restaurant Menu & Branding",
+    "description": "Custom-designed table menus, tri-fold cards, wall mount designs, and digital television layouts.",
+    "minPrice": 1999,
+    "maxPrice": 7500,
+    "deliveryTime": "4 Days",
+    "category": "Restaurant",
+    "features": [
+      "Waterproof Synthetics Sheet",
+      "High-Res Food Photorealistic Editing",
+      "Modular Layout Config",
+      "Digital Menu QR Code Included"
+    ],
+    "faqs": [
+      {
+        "q": "Do you take food photos?",
+        "a": "You can provide photos, or we can use high-quality premium stock images."
+      }
+    ],
+    "createdAt": "2026-08-14T05:31:08.054Z",
+    "updatedAt": "2026-08-14T05:31:08.054Z"
+  }
+]

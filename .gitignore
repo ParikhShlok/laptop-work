@@ -1,0 +1,32 @@
+**/.env
+**/.env.*
+!**/.env.example
+**/node_modules/
+**/.next/
+**/dist/
+**/build/
+**/__pycache__/
+**/.pytest_cache/
+**/venv/
+**/.venv/
+**/*.tsbuildinfo
+
+# These are independent Git repositories and should be pushed on their own.
+/agent/
+/AI-career-intelligence/
+/c5/
+/data/
+/ReviewPilot/
+/Startup/
+/voiceagent/
+/AI-Career-Buddy/AI-Career-Buddy/
+/AI-career-intelligence-v2-fixed/AI-career-intelligence-main/
+/AI-career-intelligence-v2-fixed/AI-career-intelligence-main.worktrees/fix-job-cards-hover-effect/
+/AI-career-intelligence-v2-fixed/AI-career-intelligence-main.worktrees/job-recommend-color-fix-and-search-error/
+/google/C3/
+/google/election/
+/google/fanpath/
+/personal finance/AI-Banking/
+/project/AI-career-intelligence/
+/task-truppler/angular/TASK-1/
+/task-truppler/angular/first/

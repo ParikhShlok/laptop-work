@@ -1,0 +1,29 @@
+[
+  {
+    "_id": "75tupu4mssieaai",
+    "customerName": "Sarah Jenkins",
+    "rating": 5,
+    "comment": "SWAPNAART completely revamped our brand logo and labels. Their response time and premium details are outstanding!",
+    "featured": true,
+    "createdAt": "2026-08-14T05:31:08.058Z",
+    "updatedAt": "2026-08-14T05:31:08.058Z"
+  },
+  {
+    "_id": "1jyljwumssieaaj",
+    "customerName": "Rajesh Mehta",
+    "rating": 5,
+    "comment": "We ordered 500 business cards and a store flex banner. High-quality print, bright colors, and delivered right to our storefront.",
+    "featured": true,
+    "createdAt": "2026-08-14T05:31:08.059Z",
+    "updatedAt": "2026-08-14T05:31:08.059Z"
+  },
+  {
+    "_id": "o4iwgmwmssieaak",
+    "customerName": "Emily Watts",
+    "rating": 4,
+    "comment": "The online dashboard made tracking my wedding invites and revisions so easy. Love their graphic style!",
+    "featured": true,
+    "createdAt": "2026-08-14T05:31:08.060Z",
+    "updatedAt": "2026-08-14T05:31:08.060Z"
+  }
+]

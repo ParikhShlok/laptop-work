@@ -1,0 +1,26 @@
+[
+  {
+    "_id": "0btk8cxmssmxamt",
+    "sender": "8o3ubwemssieaa8",
+    "recipient": "admin_placeholder_id",
+    "message": "helo",
+    "type": "text",
+    "attachments": [],
+    "order": null,
+    "read": false,
+    "createdAt": "2026-08-14T07:37:53.429Z",
+    "updatedAt": "2026-08-14T07:37:53.429Z"
+  },
+  {
+    "_id": "nzwj0z8mt886x97",
+    "sender": "sq1yrh8mt6tq57a",
+    "recipient": "admin_placeholder_id",
+    "message": "hi",
+    "type": "text",
+    "attachments": [],
+    "order": null,
+    "read": false,
+    "createdAt": "2026-08-25T05:29:47.227Z",
+    "updatedAt": "2026-08-25T05:29:47.227Z"
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "_id": "d52592zmssieaaf",
+    "title": "Aura Luxury Spa Branding",
+    "description": "Minimalist brand mark, stationery, and packaging identity in champagne gold and rose tones.",
+    "category": "branding",
+    "imageUrl": "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=600&q=80",
+    "likes": 124,
+    "createdAt": "2026-08-14T05:31:08.055Z",
+    "updatedAt": "2026-08-14T05:31:08.055Z"
+  },
+  {
+    "_id": "zels2n8mssieaag",
+    "title": "Minimalist Studio Visiting Card",
+    "description": "Matte black premium card design using textured spot UV finishes.",
+    "category": "cards",
+    "imageUrl": "https://images.unsplash.com/photo-1589156280159-27698a70f29e?auto=format&fit=crop&w=600&q=80",
+    "likes": 95,
+    "createdAt": "2026-08-14T05:31:08.056Z",
+    "updatedAt": "2026-08-14T05:31:08.056Z"
+  },
+  {
+    "_id": "zono3axmssieaah",
+    "title": "Urban Coffee Shop Menu Board",
+    "description": "Chalkboard vector layout design showcasing organic brews.",
+    "category": "restaurant",
+    "imageUrl": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80",
+    "likes": 90,
+    "createdAt": "2026-08-14T05:31:08.057Z",
+    "updatedAt": "2026-08-24T05:57:40.574Z"
+  }
+]
